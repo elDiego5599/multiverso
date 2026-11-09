@@ -14,7 +14,7 @@ export default function ErrorState({ mensaje = 'No se pudo cargar la informació
       <button
         type="button"
         onClick={onReintentar}
-        className="mt-4 rounded-full bg-danger px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+        className="mt-4 rounded-full bg-danger px-5 py-2.5 text-sm font-semibold text-danger-ink transition hover:-translate-y-0.5"
       >
         Reintentar
       </button>

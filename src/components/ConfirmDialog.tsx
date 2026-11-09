@@ -56,7 +56,7 @@ export default function ConfirmDialog({ abierto, titulo, children, textoConfirma
           <button
             type="button"
             onClick={onConfirmar}
-            className="flex-1 rounded-full bg-danger px-4 py-2.5 text-sm font-semibold text-white transition hover:brightness-110"
+            className="flex-1 rounded-full bg-danger px-4 py-2.5 text-sm font-semibold text-danger-ink transition hover:brightness-110"
           >
             {textoConfirmar}
           </button>

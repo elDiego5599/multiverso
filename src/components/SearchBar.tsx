@@ -20,7 +20,7 @@ export default function SearchBar({ valor, onCambio }: Props) {
         onChange={(e) => onCambio(e.target.value)}
         placeholder="Buscar personaje..."
         autoComplete="off"
-        className="w-full rounded-full border border-line bg-card py-3 pr-4 pl-11 text-sm shadow-soft placeholder:text-muted focus:border-accent focus:outline-none"
+        className="w-full rounded-full border border-line bg-card py-3 pr-4 pl-11 text-sm shadow-soft placeholder:text-muted focus:border-accent focus-visible:outline-none"
       />
     </div>
   )

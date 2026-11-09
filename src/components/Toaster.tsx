@@ -8,7 +8,7 @@ const estilos = {
 
 const marcas = {
   exito: 'bg-accent text-accent-ink',
-  error: 'bg-danger text-white',
+  error: 'bg-danger text-danger-ink',
   info: 'bg-ink text-paper',
 }
 
