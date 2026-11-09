@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import PortalArt from '../components/PortalArt'
+import HeroEscena from '../components/HeroEscena'
 
 const pasos = [
   {
@@ -22,24 +22,17 @@ const pasos = [
 export default function Home() {
   return (
     <>
-      <section className="relative mx-2 mt-2 overflow-hidden rounded-[28px] border border-line bg-card px-6 pt-20 pb-24 sm:mx-3 sm:px-10 md:pt-28 md:pb-32">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(60%_70%_at_85%_30%,color-mix(in_srgb,var(--glow)_32%,transparent),transparent_70%)]"
-        />
-        <PortalArt className="absolute top-1/2 right-[-18%] w-[520px] -translate-y-1/2 opacity-50 md:right-[-4%] md:opacity-90 md:w-[640px]" />
-
-        <div className="relative mx-auto max-w-6xl">
-          <p className="anim-entra mb-5 text-sm font-semibold tracking-wide text-accent uppercase">
-            Archivo del multiverso
-          </p>
-          <h1 className="anim-entra max-w-2xl font-display text-5xl leading-[0.98] font-bold [animation-delay:80ms] sm:text-7xl">
-            Todos los mundos caben en una búsqueda.
+      <section className="relative mx-2 mt-2 overflow-hidden rounded-[28px] border border-line bg-[linear-gradient(to_bottom,var(--card)_35%,color-mix(in_srgb,var(--glow)_22%,var(--card)))] px-6 pt-20 sm:mx-3 sm:px-10 md:pt-28">
+        <div className="relative mx-auto max-w-4xl text-center">
+          <h1 className="anim-entra font-display text-5xl leading-[1] font-bold sm:text-7xl">
+            <span className="text-muted">Todos los mundos.</span>
+            <br />
+            Una sola búsqueda.
           </h1>
-          <p className="anim-entra mt-6 max-w-lg text-lg text-muted [animation-delay:160ms]">
+          <p className="anim-entra mx-auto mt-6 max-w-lg text-lg text-muted [animation-delay:120ms]">
             Encuentra a cualquier personaje de Rick y Morty, revisa de dónde viene y guarda a los que no quieres perder de vista.
           </p>
-          <div className="anim-entra mt-9 flex flex-wrap gap-3 [animation-delay:240ms]">
+          <div className="anim-entra mt-8 flex flex-wrap justify-center gap-3 [animation-delay:200ms]">
             <Link
               to="/explorar"
               className="presiona rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper shadow-soft transition hover:-translate-y-0.5"
@@ -54,6 +47,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        <HeroEscena />
       </section>
 
       <section className="mx-auto mt-20 max-w-6xl px-6">

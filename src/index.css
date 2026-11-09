@@ -132,6 +132,12 @@ body::after {
   }
 }
 
+@keyframes flota {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes toast-entra {
   from {
     opacity: 0;
@@ -145,6 +151,9 @@ body::after {
   }
   .anim-toast {
     animation: toast-entra 0.28s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .anim-flota {
+    animation: flota 6s ease-in-out infinite;
   }
   .anim-giro {
     animation: portal-giro 14s linear infinite;
