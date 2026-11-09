@@ -44,6 +44,7 @@ export default function Contact() {
   }
 
   function alSalir(campo: keyof Campos) {
+    if (enviando || boletin) return
     setTocados((t) => ({ ...t, [campo]: true }))
   }
 

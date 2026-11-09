@@ -10,6 +10,20 @@ export class ErrorApi extends Error {
   }
 }
 
+async function pedir(url: string, signal: AbortSignal, intentos = 3): Promise<Response> {
+  const res = await fetch(url, { signal })
+  if (res.status !== 429 || intentos <= 1) return res
+  const espera = Math.min(Number(res.headers.get('retry-after')) || 3, 5) * 1000
+  await new Promise<void>((ok, fallo) => {
+    const t = setTimeout(ok, espera)
+    signal.addEventListener('abort', () => {
+      clearTimeout(t)
+      fallo(new DOMException('Cancelado', 'AbortError'))
+    })
+  })
+  return pedir(url, signal, intentos - 1)
+}
+
 interface Filtros {
   nombre: string
   estado: Estado | ''
@@ -21,7 +35,7 @@ export async function pedirPersonajes(f: Filtros, signal: AbortSignal): Promise<
   if (f.nombre.trim()) params.set('name', f.nombre.trim())
   if (f.estado) params.set('status', f.estado)
 
-  const res = await fetch(`${BASE}?${params}`, { signal })
+  const res = await pedir(`${BASE}?${params}`, signal)
 
   if (res.status === 404) return { personajes: [], paginas: 0, total: 0 }
   if (!res.ok) throw new ErrorApi(res.status, 'No se pudo cargar la lista')
@@ -31,7 +45,7 @@ export async function pedirPersonajes(f: Filtros, signal: AbortSignal): Promise<
 }
 
 export async function pedirPersonaje(id: string, signal: AbortSignal): Promise<Personaje> {
-  const res = await fetch(`${BASE}/${encodeURIComponent(id)}`, { signal })
+  const res = await pedir(`${BASE}/${encodeURIComponent(id)}`, signal)
   if (!res.ok) throw new ErrorApi(res.status, 'No se pudo cargar el personaje')
   return res.json()
 }
