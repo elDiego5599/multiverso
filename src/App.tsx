@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout'
 import { FavoritesProvider } from './context/FavoritesContext'
 import { ToastProvider } from './context/ToastContext'
+import Contact from './pages/Contact'
 import Detail from './pages/Detail'
 import Explore from './pages/Explore'
 import Favorites from './pages/Favorites'
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: 'explorar', element: <Explore /> },
       { path: 'explorar/:id', element: <Detail /> },
       { path: 'favoritos', element: <Favorites /> },
+      { path: 'contacto', element: <Contact /> },
       { path: '*', element: <NotFound /> },
     ],
   },
