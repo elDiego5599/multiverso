@@ -5,7 +5,6 @@ import type { Personaje } from '../types'
 
 const fondos = ['bg-naranja', 'bg-lila', 'bg-verde', 'bg-rosa', 'bg-fucsia', 'bg-accent']
 
-// Una tira de personajes sacada de la API, cada uno sobre un bloque de color
 export default function TiraPersonajes() {
   const [personajes, setPersonajes] = useState<Personaje[]>([])
 

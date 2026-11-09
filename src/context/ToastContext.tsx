@@ -26,7 +26,6 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     (tipo: TipoToast, mensaje: string) => {
       const id = siguiente.current++
       setToasts((t) => [...t.slice(-3), { id, tipo, mensaje }])
-      // Se va solo a los 4 segundos
       setTimeout(() => cerrar(id), 4000)
     },
     [cerrar],

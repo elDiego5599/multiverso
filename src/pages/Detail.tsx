@@ -71,11 +71,14 @@ function Ficha({ p, favorito, onAlternar }: FichaProps) {
   if (p.type) datos.splice(1, 0, ['Tipo', p.type])
 
   return (
-    <article className="anim-entra grid overflow-hidden  border border-line bg-card shadow-soft md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+    <article className="anim-entra grid overflow-hidden border border-line bg-card md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
       <img src={p.image} alt={`Retrato de ${p.name}`} width={300} height={300} className="aspect-square size-full object-cover" />
-      <div className="flex flex-col p-7 sm:p-9">
-        <span className={`w-fit  px-3 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>{estados[p.status]}</span>
-        <h1 className="mt-3 font-display text-4xl font-medium">{p.name}</h1>
+      <div className="flex flex-col p-7 sm:p-10">
+        <div className="flex items-center justify-between gap-4">
+          <span className="font-mono text-xs uppercase tracking-wider text-muted">[ Ficha {String(p.id).padStart(3, '0')} ]</span>
+          <span className={`w-fit px-3 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>{estados[p.status]}</span>
+        </div>
+        <h1 className="mt-6 font-display text-5xl font-light leading-[1.02] sm:text-6xl">{p.name}</h1>
 
         <dl className="mt-6 divide-y divide-line text-sm">
           {datos.map(([k, v]) => (
