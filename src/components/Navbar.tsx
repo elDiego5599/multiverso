@@ -24,9 +24,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 px-4 pt-4">
       <nav
         aria-label="Principal"
-        className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-line bg-card/85 py-2 pr-2.5 pl-4 shadow-soft backdrop-blur-md"
+        className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-line vidrio bg-card/80 py-2 pr-2.5 pl-4 shadow-soft backdrop-blur-xl backdrop-saturate-150"
       >
-        <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight">
+        <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold">
           <Logo />
           Multiverso
         </Link>

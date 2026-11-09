@@ -89,7 +89,7 @@ export default function Contact() {
   return (
     <section className="mx-auto grid max-w-5xl gap-10 px-6 pt-14 md:grid-cols-[1fr_1.15fr] md:gap-16">
       <header>
-        <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Contacto</h1>
+        <h1 className="font-display text-4xl font-bold sm:text-5xl">Contacto</h1>
         <p className="mt-4 max-w-sm text-muted">
           ¿Tienes preguntas o sugerencias? Déjame un mensaje y te respondo cuando cruce el siguiente portal.
         </p>
