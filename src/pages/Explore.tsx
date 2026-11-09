@@ -60,7 +60,7 @@ export default function Explore() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-14">
       <header className="max-w-xl">
-        <h1 className="font-display text-4xl font-bold sm:text-5xl">Explorar personajes</h1>
+        <h1 className="font-display text-4xl font-medium sm:text-5xl">Explorar personajes</h1>
         <p className="mt-3 text-muted">Los datos llegan en tiempo real desde la API. Busca por nombre o filtra por estado.</p>
       </header>
 
@@ -74,7 +74,7 @@ export default function Explore() {
         {carga.tipo === 'error' && <ErrorState onReintentar={() => setIntento((n) => n + 1)} />}
         {carga.tipo === 'listo' && carga.datos.personajes.length === 0 && (
           <EmptyState titulo="Nadie coincide con esa búsqueda" texto="Prueba con otro nombre o quita el filtro de estado.">
-            <button type="button" onClick={limpiar} className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
+            <button type="button" onClick={limpiar} className="bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
               Limpiar búsqueda
             </button>
           </EmptyState>

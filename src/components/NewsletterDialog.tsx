@@ -33,11 +33,11 @@ export default function NewsletterDialog({ abierto, onAceptar, onRechazar }: Pro
       aria-labelledby="boletin-titulo"
       // Trampa 4: se anula Esc para que el modal no se pueda descartar sin elegir
       onCancel={(e) => e.preventDefault()}
-      className="m-auto w-[calc(100%-2rem)] max-w-md overflow-hidden rounded-3xl border border-line bg-card p-0 text-ink shadow-soft"
+      className="m-auto w-[calc(100%-2rem)] max-w-md overflow-hidden  border border-line bg-card p-0 text-ink shadow-soft"
     >
       <div className="relative bg-[#16201b] px-8 pt-9 pb-8 text-[#e9f0eb]">
         <p className="text-xs font-semibold tracking-widest text-[#6fe08a] uppercase">Solo hoy</p>
-        <h2 id="boletin-titulo" className="mt-2 font-display text-3xl leading-tight font-bold">
+        <h2 id="boletin-titulo" className="mt-2 font-display text-3xl leading-tight font-medium">
           Espera, no te vayas con las manos vacías
         </h2>
         <p className="mt-3 text-sm text-[#e9f0eb]/70">
@@ -48,7 +48,7 @@ export default function NewsletterDialog({ abierto, onAceptar, onRechazar }: Pro
         <button
           type="button"
           onClick={onAceptar}
-          className="w-full rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-ink shadow-soft transition hover:-translate-y-0.5"
+          className="w-full  bg-accent px-6 py-4 text-base font-bold text-accent-ink shadow-soft transition hover:-translate-y-0.5"
         >
           Sí, quiero los secretos
         </button>

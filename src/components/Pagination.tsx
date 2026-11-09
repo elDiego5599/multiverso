@@ -7,7 +7,7 @@ interface Props {
 export default function Pagination({ pagina, total, onCambio }: Props) {
   if (total <= 1) return null
   const boton =
-    'rounded-full border border-line bg-card px-5 py-2.5 text-sm font-semibold shadow-soft transition enabled:hover:-translate-y-0.5 disabled:opacity-40'
+    ' border border-line bg-card px-5 py-2.5 text-sm font-semibold shadow-soft transition enabled:hover:-translate-y-0.5 disabled:opacity-40'
   return (
     <nav aria-label="Paginación" className="mt-10 flex items-center justify-center gap-4">
       <button type="button" className={boton} disabled={pagina <= 1} onClick={() => onCambio(pagina - 1)}>

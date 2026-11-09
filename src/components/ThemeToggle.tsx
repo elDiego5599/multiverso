@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={cambiar}
       aria-label={tema === 'oscuro' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
-      className="grid size-9 place-items-center rounded-full border border-line text-ink transition hover:bg-sunken"
+      className="grid size-9 place-items-center  border border-line text-ink transition hover:bg-sunken"
     >
       {tema === 'oscuro' ? (
         <svg viewBox="0 0 24 24" className="size-[18px]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

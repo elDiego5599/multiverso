@@ -42,7 +42,7 @@ export default function Detail() {
         {carga.tipo === 'error' && <ErrorState onReintentar={() => setIntento((n) => n + 1)} />}
         {carga.tipo === 'no-existe' && (
           <EmptyState titulo="Ese personaje no existe" texto="Puede que el número no esté en el archivo.">
-            <Link to="/explorar" className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
+            <Link to="/explorar" className="bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
               Ver todos los personajes
             </Link>
           </EmptyState>
@@ -71,11 +71,11 @@ function Ficha({ p, favorito, onAlternar }: FichaProps) {
   if (p.type) datos.splice(1, 0, ['Tipo', p.type])
 
   return (
-    <article className="anim-entra grid overflow-hidden rounded-[28px] border border-line bg-card shadow-soft md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+    <article className="anim-entra grid overflow-hidden  border border-line bg-card shadow-soft md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
       <img src={p.image} alt={`Retrato de ${p.name}`} width={300} height={300} className="aspect-square size-full object-cover" />
       <div className="flex flex-col p-7 sm:p-9">
-        <span className={`w-fit rounded-full px-3 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>{estados[p.status]}</span>
-        <h1 className="mt-3 font-display text-4xl font-bold">{p.name}</h1>
+        <span className={`w-fit  px-3 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>{estados[p.status]}</span>
+        <h1 className="mt-3 font-display text-4xl font-medium">{p.name}</h1>
 
         <dl className="mt-6 divide-y divide-line text-sm">
           {datos.map(([k, v]) => (

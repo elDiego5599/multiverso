@@ -71,7 +71,7 @@ export default function Contact() {
   }
 
   const campo =
-    'w-full rounded-2xl border bg-paper px-4 py-3 text-sm placeholder:text-muted/70 focus-visible:outline-none'
+    'w-full  border bg-paper px-4 py-3 text-sm placeholder:text-muted/70 focus-visible:outline-none'
 
   function propiedades(c: keyof Campos) {
     const mal = tocados[c] && errores[c]
@@ -89,7 +89,7 @@ export default function Contact() {
   return (
     <section className="mx-auto grid max-w-5xl gap-10 px-6 pt-14 md:grid-cols-[1fr_1.15fr] md:gap-16">
       <header>
-        <h1 className="font-display text-4xl font-bold sm:text-5xl">Contacto</h1>
+        <h1 className="font-display text-4xl font-medium sm:text-5xl">Contacto</h1>
         <p className="mt-4 max-w-sm text-muted">
           ¿Tienes preguntas o sugerencias? Déjame un mensaje y te respondo cuando cruce el siguiente portal.
         </p>
@@ -98,7 +98,7 @@ export default function Contact() {
       <form
         onSubmit={alEnviar}
         noValidate
-        className="rounded-3xl border border-line bg-card p-6 shadow-soft sm:p-8"
+        className="border border-line bg-card p-6 shadow-soft sm:p-8"
       >
         <div>
           <label htmlFor="nombre" className="mb-1.5 block text-sm font-medium">
@@ -124,7 +124,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={!valido || enviando}
-          className="mt-7 w-full rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
+          className="mt-7 w-full  bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40"
         >
           {enviando ? 'Enviando...' : 'Enviar mensaje'}
         </button>

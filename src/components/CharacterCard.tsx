@@ -14,7 +14,7 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
     <li className="group relative">
       <Link
         to={`/explorar/${p.id}`}
-        className="presiona block overflow-hidden rounded-3xl border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
+        className="presiona block overflow-hidden  border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
       >
         <div className="aspect-square overflow-hidden bg-sunken">
           <img
@@ -27,10 +27,10 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
           />
         </div>
         <div className="p-4">
-          <h3 className="truncate font-display text-lg font-bold">{p.name}</h3>
+          <h3 className="truncate font-display text-lg font-medium">{p.name}</h3>
           <p className="mt-1 text-sm text-muted">{traducirEspecie(p.species)}</p>
           <div className="mt-3 flex items-center justify-between gap-2">
-            <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>
+            <span className={` px-2.5 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>
               {estados[p.status]}
             </span>
             <span className="truncate text-xs text-muted">{traducirLugar(p.origin.name)}</span>

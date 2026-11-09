@@ -12,7 +12,7 @@ export default function FavoriteButton({ activo, nombre, onClick, className = ''
       onClick={onClick}
       aria-pressed={activo}
       aria-label={activo ? `Quitar a ${nombre} de favoritos` : `Agregar a ${nombre} a favoritos`}
-      className={`grid size-9 place-items-center rounded-full border border-line shadow-soft backdrop-blur transition hover:scale-105 ${
+      className={`grid size-9 place-items-center  border border-line shadow-soft backdrop-blur transition hover:scale-105 ${
         activo ? 'bg-glow text-ink' : 'bg-card/90 text-muted hover:text-ink'
       } ${className}`}
     >
