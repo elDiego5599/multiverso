@@ -7,15 +7,17 @@ export default function Layout() {
     <>
       <a
         href="#contenido"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50  focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
       >
         Saltar al contenido
       </a>
-      <Navbar />
-      <main id="contenido">
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="min-h-screen sm:m-3 sm:min-h-[calc(100vh-1.5rem)] sm:border sm:border-line">
+        <Navbar />
+        <main id="contenido">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
       <ScrollRestoration />
     </>
   )

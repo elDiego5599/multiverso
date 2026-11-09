@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="mx-auto mt-24 flex max-w-6xl flex-col gap-3 px-6 pb-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+    <footer className="mt-24 flex flex-col gap-3 border-t border-line px-6 py-6 font-mono text-xs text-muted uppercase sm:flex-row sm:items-center sm:justify-between">
       <p>
         Datos de{' '}
         <a

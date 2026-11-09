@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
-import PortalArt from '../components/PortalArt'
+import Parche from '../components/Parche'
 
 export default function NotFound() {
   return (
-    <section className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
-      <PortalArt className="absolute top-1/2 left-1/2 -z-10 w-[480px] -translate-x-1/2 -translate-y-1/2 opacity-25" />
-      <p className="font-display text-8xl font-extrabold text-accent sm:text-9xl">404</p>
-      <h1 className="mt-4 font-display text-2xl font-bold sm:text-3xl">Este mundo no existe</h1>
-      <p className="mt-2 max-w-sm text-muted">La dirección que buscas se perdió en otra dimension.</p>
-      <Link to="/" className="mt-8 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper shadow-soft">
+    <section className="flex min-h-[70vh] flex-col items-center justify-center px-6 py-20 text-center">
+      <p className="font-display text-[clamp(5rem,22vw,16rem)] leading-none font-normal text-accent">
+        4<Parche />4
+      </p>
+      <h1 className="mt-6 font-display text-3xl">Este mundo no existe</h1>
+      <p className="mt-2 max-w-sm text-muted">La dirección que buscas se perdió en otra dimensión.</p>
+      <Link to="/" className="presiona mt-8 bg-ink px-6 py-3 text-sm text-paper">
         Volver al inicio
       </Link>
     </section>

@@ -3,38 +3,41 @@
 @custom-variant dark (&:where([data-tema='oscuro'], [data-tema='oscuro'] *));
 
 :root {
-  --paper: #efece4;
-  --card: #fbfaf6;
-  --sunken: #e6e2d8;
-  --ink: #16201b;
-  --muted: #5b6860;
-  --line: rgb(22 32 27 / 0.13);
-  --accent: #1c7f48;
+  --paper: #fafafa;
+  --card: #ffffff;
+  --sunken: #eeeeee;
+  --ink: #1f1f1f;
+  --muted: #666666;
+  --line: rgb(31 31 31 / 0.16);
+  --accent: #193ef9;
   --accent-ink: #ffffff;
-  --glow: #6fe08a;
-  --danger: #b8322b;
-  --danger-soft: #f6dcd9;
+  --glow: #e8559f;
+  --naranja: #f4994a;
+  --lila: #a3a3f7;
+  --verde: #6fd57a;
+  --rosa: #f6b8c4;
+  --fucsia: #e8559f;
+  --danger: #c4302b;
+  --danger-soft: #f7dcda;
   --danger-ink: #ffffff;
-  --shadow: 0 1px 1px rgb(22 32 27 / 0.04), 0 4px 10px -2px rgb(22 32 27 / 0.07),
-    0 18px 36px -12px rgb(22 32 27 / 0.16);
+  --shadow: none;
   color-scheme: light;
 }
 
 :root[data-tema='oscuro'] {
-  --paper: #0e1411;
-  --card: #161e1a;
-  --sunken: #1c2621;
-  --ink: #e9f0eb;
-  --muted: #92a398;
-  --line: rgb(233 240 235 / 0.13);
-  --accent: #6fe08a;
-  --accent-ink: #0e1411;
-  --glow: #6fe08a;
+  --paper: #121212;
+  --card: #1a1a1a;
+  --sunken: #232323;
+  --ink: #f2f2f2;
+  --muted: #9b9b9b;
+  --line: rgb(255 255 255 / 0.16);
+  --accent: #7b92ff;
+  --accent-ink: #101010;
+  --glow: #e8559f;
   --danger: #ff7a70;
   --danger-soft: #3a1f1d;
   --danger-ink: #2a0b08;
-  --shadow: 0 1px 1px rgb(0 0 0 / 0.3), 0 4px 10px -2px rgb(0 0 0 / 0.35),
-    0 18px 36px -12px rgb(0 0 0 / 0.55);
+  --shadow: none;
   color-scheme: dark;
 }
 
@@ -48,13 +51,19 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-glow: var(--glow);
+  --color-naranja: var(--naranja);
+  --color-lila: var(--lila);
+  --color-verde: var(--verde);
+  --color-rosa: var(--rosa);
+  --color-fucsia: var(--fucsia);
   --color-danger: var(--danger);
   --color-danger-soft: var(--danger-soft);
   --color-danger-ink: var(--danger-ink);
   --shadow-soft: var(--shadow);
   --default-transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 html {
@@ -64,7 +73,7 @@ html {
 /* Títulos con tracking cerrado: las letras grandes se ven separadas si no se aprietan */
 h1,
 h2 {
-  letter-spacing: -0.035em;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
@@ -84,23 +93,6 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-/* Grano fino encima de todo para que el fondo no se vea plano */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0.06;
-  mix-blend-mode: multiply;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-:root[data-tema='oscuro'] body::after {
-  mix-blend-mode: screen;
-  opacity: 0.05;
 }
 
 ::selection {

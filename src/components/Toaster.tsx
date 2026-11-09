@@ -29,7 +29,7 @@ export default function Toaster({ toasts, onCerrar }: Props) {
       {toasts.map((t) => (
         <div
           key={t.id}
-          className={`anim-toast pointer-events-auto flex w-full max-w-sm items-center gap-3 rounded-2xl border px-3.5 py-3 text-sm shadow-soft ${estilos[t.tipo]}`}
+          className={`anim-toast pointer-events-auto flex w-full max-w-sm items-center gap-3 border px-3.5 py-3 text-sm shadow-soft ${estilos[t.tipo]}`}
         >
           <span
             aria-hidden="true"
@@ -42,7 +42,7 @@ export default function Toaster({ toasts, onCerrar }: Props) {
             type="button"
             onClick={() => onCerrar(t.id)}
             aria-label="Cerrar aviso"
-            className="grid size-6 place-items-center rounded-full text-muted transition hover:bg-sunken hover:text-ink"
+            className="grid size-6 place-items-center text-muted transition hover:bg-sunken hover:text-ink"
           >
             ×
           </button>

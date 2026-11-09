@@ -14,7 +14,7 @@ export default function EmptyState({ titulo, texto, children }: Props) {
         <circle cx="32" cy="32" r="12" />
         <circle cx="32" cy="32" r="3" fill="currentColor" />
       </svg>
-      <p className="font-display text-lg font-bold">{titulo}</p>
+      <p className="font-display text-lg font-medium">{titulo}</p>
       {texto && <p className="max-w-sm text-sm text-muted">{texto}</p>}
       {children && <div className="mt-4">{children}</div>}
     </div>

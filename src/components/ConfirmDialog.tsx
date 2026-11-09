@@ -32,7 +32,7 @@ export default function ConfirmDialog({ abierto, titulo, children, textoConfirma
         // Un clic en el fondo (el propio dialog) lo cierra
         if (e.target === ref.current) onCancelar()
       }}
-      className="m-auto w-[calc(100%-2rem)] max-w-sm rounded-3xl border border-line bg-card p-0 text-ink shadow-soft"
+      className="m-auto w-[calc(100%-2rem)] max-w-sm border border-line bg-card p-0 text-ink shadow-soft"
     >
       <div className="flex flex-col items-center px-7 pt-9 pb-7 text-center">
         <span
@@ -41,7 +41,7 @@ export default function ConfirmDialog({ abierto, titulo, children, textoConfirma
         >
           !
         </span>
-        <h2 id="confirmar-titulo" className="font-display text-xl font-bold">
+        <h2 id="confirmar-titulo" className="font-display text-xl font-medium">
           {titulo}
         </h2>
         <div className="mt-2 text-sm text-muted">{children}</div>
@@ -49,14 +49,14 @@ export default function ConfirmDialog({ abierto, titulo, children, textoConfirma
           <button
             type="button"
             onClick={onCancelar}
-            className="flex-1 rounded-full border border-line bg-sunken px-4 py-2.5 text-sm font-semibold transition hover:brightness-95"
+            className="flex-1 border border-line bg-sunken px-4 py-2.5 text-sm font-semibold transition hover:brightness-95"
           >
             Cancelar
           </button>
           <button
             type="button"
             onClick={onConfirmar}
-            className="flex-1 rounded-full bg-danger px-4 py-2.5 text-sm font-semibold text-danger-ink transition hover:brightness-110"
+            className="flex-1 bg-danger px-4 py-2.5 text-sm font-semibold text-danger-ink transition hover:brightness-110"
           >
             {textoConfirmar}
           </button>
