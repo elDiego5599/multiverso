@@ -27,7 +27,7 @@ export default function Home() {
           aria-hidden="true"
           className="absolute inset-0 bg-[radial-gradient(60%_70%_at_85%_30%,color-mix(in_srgb,var(--glow)_32%,transparent),transparent_70%)]"
         />
-        <PortalArt className="absolute top-1/2 right-[-18%] w-[520px] -translate-y-1/2 opacity-90 md:right-[-4%] md:w-[640px]" />
+        <PortalArt className="absolute top-1/2 right-[-18%] w-[520px] -translate-y-1/2 opacity-50 md:right-[-4%] md:opacity-90 md:w-[640px]" />
 
         <div className="relative mx-auto max-w-6xl">
           <p className="anim-entra mb-5 text-sm font-semibold tracking-wide text-accent uppercase">
