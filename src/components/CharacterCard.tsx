@@ -14,13 +14,22 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
     <li className="group relative">
       <Link
         to={`/explorar/${p.id}`}
-        className="presiona block overflow-hidden  border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
+        className="presiona block overflow-hidden border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
       >
         <div className="aspect-square overflow-hidden bg-sunken">
           <img
             src={p.image}
             alt={`Retrato de ${p.name}`}
-            loading="lazy"
+            decoding="async"
+            onError={(e) => {
+              const img = e.currentTarget
+              const n = Number(img.dataset.reintento ?? 0) + 1
+              if (n > 3) return
+              img.dataset.reintento = String(n)
+              setTimeout(() => {
+                img.src = `${p.image}?r=${n}`
+              }, 700 * n)
+            }}
             width={300}
             height={300}
             className="size-full object-cover transition duration-500 group-hover:scale-105"
@@ -30,7 +39,7 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
           <h3 className="truncate font-display text-lg font-medium">{p.name}</h3>
           <p className="mt-1 text-sm text-muted">{traducirEspecie(p.species)}</p>
           <div className="mt-3 flex items-center justify-between gap-2">
-            <span className={` px-2.5 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>
+            <span className={`px-2.5 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>
               {estados[p.status]}
             </span>
             <span className="truncate text-xs text-muted">{traducirLugar(p.origin.name)}</span>
