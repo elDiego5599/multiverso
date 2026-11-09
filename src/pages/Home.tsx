@@ -50,7 +50,7 @@ export default function Home() {
               id="busqueda-inicio"
               value={texto}
               onChange={(e) => setTexto(e.target.value)}
-              placeholder="Escribe el nombre de un personaje..."
+              placeholder="Busca un personaje..."
               autoComplete="off"
               className="w-full bg-transparent text-base outline-none placeholder:text-muted sm:text-lg"
             />

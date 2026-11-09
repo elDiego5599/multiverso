@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { colorEstado, estados, traducirEspecie, traducirLugar } from '../etiquetas'
 import type { Personaje } from '../types'
@@ -10,13 +11,19 @@ interface Props {
 }
 
 export default function CharacterCard({ personaje: p, favorito, onAlternar }: Props) {
+  const [fallo, setFallo] = useState(false)
   return (
     <li className="group relative">
       <Link
         to={`/explorar/${p.id}`}
         className="presiona block overflow-hidden border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
       >
-        <div className="aspect-square overflow-hidden bg-sunken">
+        <div className="relative aspect-square overflow-hidden bg-sunken">
+          {fallo && (
+            <span aria-hidden="true" className="absolute inset-0 grid place-items-center font-display text-7xl font-light text-muted">
+              {p.name.charAt(0)}
+            </span>
+          )}
           <img
             src={p.image}
             alt={`Retrato de ${p.name}`}
@@ -24,15 +31,18 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
             onError={(e) => {
               const img = e.currentTarget
               const n = Number(img.dataset.reintento ?? 0) + 1
-              if (n > 3) return
+              if (n > 5) {
+                setFallo(true)
+                return
+              }
               img.dataset.reintento = String(n)
               setTimeout(() => {
                 img.src = `${p.image}?r=${n}`
-              }, 700 * n)
+              }, 1200 * n)
             }}
             width={300}
             height={300}
-            className="size-full object-cover transition duration-500 group-hover:scale-105"
+            className={`size-full object-cover transition duration-500 group-hover:scale-105 ${fallo ? 'invisible' : ''}`}
           />
         </div>
         <div className="p-4">
