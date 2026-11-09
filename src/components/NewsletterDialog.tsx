@@ -35,12 +35,12 @@ export default function NewsletterDialog({ abierto, onAceptar, onRechazar }: Pro
       onCancel={(e) => e.preventDefault()}
       className="m-auto w-[calc(100%-2rem)] max-w-md overflow-hidden rounded-3xl border border-line bg-card p-0 text-ink shadow-soft"
     >
-      <div className="relative bg-ink px-8 pt-9 pb-8 text-paper">
-        <p className="text-xs font-semibold tracking-widest text-glow uppercase">Solo hoy</p>
+      <div className="relative bg-[#16201b] px-8 pt-9 pb-8 text-[#e9f0eb]">
+        <p className="text-xs font-semibold tracking-widest text-[#6fe08a] uppercase">Solo hoy</p>
         <h2 id="boletin-titulo" className="mt-2 font-display text-3xl leading-tight font-bold">
           Espera, no te vayas con las manos vacías
         </h2>
-        <p className="mt-3 text-sm text-paper/70">
+        <p className="mt-3 text-sm text-[#e9f0eb]/70">
           Recibe en tu correo datos secretos del multiverso antes que nadie. Cupos limitados.
         </p>
       </div>
