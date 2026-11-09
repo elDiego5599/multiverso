@@ -39,7 +39,6 @@ export default function Explore() {
   // Cuando el usuario deja de teclear, pasamos el texto a la URL y volvemos a la página 1
   useEffect(() => {
     if (textoRetrasado !== nombre) cambiar({ q: textoRetrasado, p: '' })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textoRetrasado])
 
   useEffect(() => {
