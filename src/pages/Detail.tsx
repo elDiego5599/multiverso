@@ -75,7 +75,7 @@ function Ficha({ p, favorito, onAlternar }: FichaProps) {
       <img src={p.image} alt={`Retrato de ${p.name}`} width={300} height={300} className="aspect-square size-full object-cover" />
       <div className="flex flex-col p-7 sm:p-9">
         <span className={`w-fit rounded-full px-3 py-1 text-xs font-semibold ${colorEstado[p.status]}`}>{estados[p.status]}</span>
-        <h1 className="mt-3 font-display text-4xl font-bold tracking-tight">{p.name}</h1>
+        <h1 className="mt-3 font-display text-4xl font-bold">{p.name}</h1>
 
         <dl className="mt-6 divide-y divide-line text-sm">
           {datos.map(([k, v]) => (

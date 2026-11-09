@@ -14,7 +14,7 @@ export default function CharacterCard({ personaje: p, favorito, onAlternar }: Pr
     <li className="group relative">
       <Link
         to={`/explorar/${p.id}`}
-        className="block overflow-hidden rounded-3xl border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
+        className="presiona block overflow-hidden rounded-3xl border border-line bg-card shadow-soft transition duration-300 hover:-translate-y-1"
       >
         <div className="aspect-square overflow-hidden bg-sunken">
           <img

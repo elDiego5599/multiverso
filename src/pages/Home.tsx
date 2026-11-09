@@ -33,7 +33,7 @@ export default function Home() {
           <p className="anim-entra mb-5 text-sm font-semibold tracking-wide text-accent uppercase">
             Archivo del multiverso
           </p>
-          <h1 className="anim-entra max-w-2xl font-display text-5xl leading-[0.98] font-bold tracking-tight [animation-delay:80ms] sm:text-7xl">
+          <h1 className="anim-entra max-w-2xl font-display text-5xl leading-[0.98] font-bold [animation-delay:80ms] sm:text-7xl">
             Todos los mundos caben en una búsqueda.
           </h1>
           <p className="anim-entra mt-6 max-w-lg text-lg text-muted [animation-delay:160ms]">
@@ -42,13 +42,13 @@ export default function Home() {
           <div className="anim-entra mt-9 flex flex-wrap gap-3 [animation-delay:240ms]">
             <Link
               to="/explorar"
-              className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper shadow-soft transition hover:-translate-y-0.5"
+              className="presiona rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper shadow-soft transition hover:-translate-y-0.5"
             >
               Entrar al archivo
             </Link>
             <Link
               to="/favoritos"
-              className="rounded-full border border-line bg-card/70 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-sunken"
+              className="presiona rounded-full border border-line bg-card/70 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-sunken"
             >
               Ver mis favoritos
             </Link>
@@ -57,11 +57,11 @@ export default function Home() {
       </section>
 
       <section className="mx-auto mt-20 max-w-6xl px-6">
-        <h2 className="max-w-md font-display text-3xl font-bold tracking-tight sm:text-4xl">Así se usa</h2>
+        <h2 className="max-w-md font-display text-3xl font-bold sm:text-4xl">Así se usa</h2>
         <ol className="mt-10 grid gap-5 md:grid-cols-3">
           {pasos.map((p) => (
-            <li key={p.n} className="rounded-3xl border border-line bg-card p-7 shadow-soft">
-              <span className="font-display text-5xl font-bold text-accent/70">{p.n}</span>
+            <li key={p.n} className="revela rounded-3xl border border-line bg-card p-7 shadow-soft">
+              <span className="font-mono text-sm font-semibold tracking-[0.12em] text-accent">{p.n}</span>
               <h3 className="mt-6 font-display text-xl font-bold">{p.titulo}</h3>
               <p className="mt-2 text-muted">{p.texto}</p>
             </li>

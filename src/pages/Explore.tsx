@@ -60,7 +60,7 @@ export default function Explore() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-14">
       <header className="max-w-xl">
-        <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Explorar personajes</h1>
+        <h1 className="font-display text-4xl font-bold sm:text-5xl">Explorar personajes</h1>
         <p className="mt-3 text-muted">Los datos llegan en tiempo real desde la API. Busca por nombre o filtra por estado.</p>
       </header>
 
