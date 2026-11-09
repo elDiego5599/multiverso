@@ -71,7 +71,7 @@ export default function Contact() {
   }
 
   const campo =
-    'w-full rounded-2xl border bg-paper px-4 py-3 text-sm placeholder:text-muted/70 focus:outline-none'
+    'w-full rounded-2xl border bg-paper px-4 py-3 text-sm placeholder:text-muted/70 focus-visible:outline-none'
 
   function propiedades(c: keyof Campos) {
     const mal = tocados[c] && errores[c]

@@ -14,6 +14,7 @@
   --glow: #6fe08a;
   --danger: #b8322b;
   --danger-soft: #f6dcd9;
+  --danger-ink: #ffffff;
   --shadow: 0 1px 1px rgb(22 32 27 / 0.04), 0 4px 10px -2px rgb(22 32 27 / 0.07),
     0 18px 36px -12px rgb(22 32 27 / 0.16);
   color-scheme: light;
@@ -31,6 +32,7 @@
   --glow: #6fe08a;
   --danger: #ff7a70;
   --danger-soft: #3a1f1d;
+  --danger-ink: #2a0b08;
   --shadow: 0 1px 1px rgb(0 0 0 / 0.3), 0 4px 10px -2px rgb(0 0 0 / 0.35),
     0 18px 36px -12px rgb(0 0 0 / 0.55);
   color-scheme: dark;
@@ -48,6 +50,7 @@
   --color-glow: var(--glow);
   --color-danger: var(--danger);
   --color-danger-soft: var(--danger-soft);
+  --color-danger-ink: var(--danger-ink);
   --shadow-soft: var(--shadow);
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
