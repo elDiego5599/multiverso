@@ -15,7 +15,6 @@ import type { Estado, Pagina } from '../types'
 type Carga = { tipo: 'cargando' } | { tipo: 'error' } | { tipo: 'listo'; datos: Pagina }
 
 export default function Explore() {
-  // La búsqueda vive en la URL: al volver desde una ficha todo sigue como lo dejaste
   const [params, setParams] = useSearchParams()
   const nombre = params.get('q') ?? ''
   const estado = (params.get('estado') ?? '') as Estado | ''
@@ -36,7 +35,6 @@ export default function Explore() {
     setParams(nuevo, { replace: true })
   }
 
-  // Cuando el usuario deja de teclear, pasamos el texto a la URL y volvemos a la página 1
   useEffect(() => {
     if (textoRetrasado !== nombre) cambiar({ q: textoRetrasado, p: '' })
   }, [textoRetrasado])

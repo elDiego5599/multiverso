@@ -60,7 +60,6 @@ export default function Contact() {
   function enviar() {
     setConfirmando(false)
     setEnviando(true)
-    // No hay servidor de correo: se simula el envío con una pequeña espera
     setTimeout(() => {
       setEnviando(false)
       setValores(vacio)

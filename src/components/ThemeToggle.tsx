@@ -13,7 +13,6 @@ export default function ThemeToggle() {
     try {
       localStorage.setItem('tema', nuevo)
     } catch {
-      // No pasa nada si no se puede recordar
     }
     setTema(nuevo)
   }

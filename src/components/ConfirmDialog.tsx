@@ -9,7 +9,6 @@ interface Props {
   onCancelar: () => void
 }
 
-// <dialog> nativo: showModal() se encarga del foco, de Esc y del fondo bloqueado
 export default function ConfirmDialog({ abierto, titulo, children, textoConfirmar, onConfirmar, onCancelar }: Props) {
   const ref = useRef<HTMLDialogElement>(null)
 
@@ -29,7 +28,6 @@ export default function ConfirmDialog({ abierto, titulo, children, textoConfirma
         onCancelar()
       }}
       onClick={(e) => {
-        // Un clic en el fondo (el propio dialog) lo cierra
         if (e.target === ref.current) onCancelar()
       }}
       className="m-auto w-[calc(100%-2rem)] max-w-sm border border-line bg-card p-0 text-ink shadow-soft"

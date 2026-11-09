@@ -1,8 +1,9 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom'
+import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
 export default function Layout() {
+  const { pathname } = useLocation()
   return (
     <>
       <a
@@ -13,7 +14,7 @@ export default function Layout() {
       </a>
       <div className="min-h-screen sm:m-3 sm:min-h-[calc(100vh-1.5rem)] sm:border sm:border-line">
         <Navbar />
-        <main id="contenido">
+        <main id="contenido" key={pathname} className="anim-pagina">
           <Outlet />
         </main>
         <Footer />

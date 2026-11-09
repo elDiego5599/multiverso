@@ -1,4 +1,3 @@
-// Cuadro con anillos que gira, va incrustado dentro del título del inicio
 export default function Parche() {
   return (
     <span aria-hidden="true" className="mx-[0.12em] inline-block size-[0.78em] translate-y-[0.04em] bg-fucsia align-baseline">

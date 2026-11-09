@@ -4,8 +4,6 @@ import { useFavoritos } from '../context/FavoritesContext'
 import { useToast } from '../context/ToastContext'
 import type { Personaje } from '../types'
 
-// Agregar es directo. Quitar pide confirmación con el dialog nativo.
-// Devuelve la acción y el dialog para que la página lo pinte una sola vez.
 export function useFavoritoAccion() {
   const { esFavorito, agregar, quitar } = useFavoritos()
   const { avisar } = useToast()

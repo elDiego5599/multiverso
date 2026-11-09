@@ -31,16 +31,15 @@ export default function NewsletterDialog({ abierto, onAceptar, onRechazar }: Pro
     <dialog
       ref={ref}
       aria-labelledby="boletin-titulo"
-      // Trampa 4: se anula Esc para que el modal no se pueda descartar sin elegir
       onCancel={(e) => e.preventDefault()}
       className="m-auto w-[calc(100%-2rem)] max-w-md overflow-hidden  border border-line bg-card p-0 text-ink shadow-soft"
     >
-      <div className="relative bg-[#16201b] px-8 pt-9 pb-8 text-[#e9f0eb]">
-        <p className="text-xs font-semibold tracking-widest text-[#6fe08a] uppercase">Solo hoy</p>
+      <div className="relative bg-[#1f1f1f] px-8 pt-9 pb-8 text-[#f2f2f2]">
+        <p className="text-xs font-semibold tracking-widest text-[#f6b8c4] uppercase">Solo hoy</p>
         <h2 id="boletin-titulo" className="mt-2 font-display text-3xl leading-tight font-medium">
           Espera, no te vayas con las manos vacías
         </h2>
-        <p className="mt-3 text-sm text-[#e9f0eb]/70">
+        <p className="mt-3 text-sm text-[#f2f2f2]/70">
           Recibe en tu correo datos secretos del multiverso antes que nadie. Cupos limitados.
         </p>
       </div>

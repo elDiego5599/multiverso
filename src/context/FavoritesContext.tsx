@@ -20,7 +20,6 @@ function leer(): Personaje[] {
   }
 }
 
-// El estado vive aquí arriba, fuera de las rutas, para que no se pierda al navegar
 export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [favoritos, setFavoritos] = useState<Personaje[]>(leer)
 
@@ -28,7 +27,6 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(CLAVE, JSON.stringify(favoritos))
     } catch {
-      // Sin almacenamiento seguimos funcionando mientras la pestaña siga abierta
     }
   }, [favoritos])
 
